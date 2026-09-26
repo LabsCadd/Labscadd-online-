@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -32,12 +33,14 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-green flex items-center justify-center font-bold text-white text-xl">
-            LC
-          </div>
-          <span className="font-montserrat font-bold text-xl tracking-wider text-white">
-            LABS CADD
-          </span>
+          <Image
+            src="/images/logo.jpeg"
+            alt="LabsCadd Logo"
+            width={140}
+            height={48}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
