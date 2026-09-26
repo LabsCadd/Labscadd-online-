@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
-  // Use your actual WhatsApp phone number here (with country code, no + or spaces)
-  const phoneNumber = "15551234567"; 
+  // WhatsApp phone number
+  const phoneNumber = "918072819348"; 
   const message = "Hello! I'm interested in your courses at LABS CADD.";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

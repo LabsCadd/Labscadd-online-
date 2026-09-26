@@ -84,7 +84,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-green hover:border-green transition-colors">
                 <LinkedinIcon />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-green hover:border-green transition-colors">
+              <a href="https://wa.me/918072819348" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-green hover:border-green transition-colors" aria-label="Chat on WhatsApp">
                 <WhatsappIcon />
               </a>
             </div>
@@ -107,15 +107,19 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green shrink-0 mt-1" />
-                <span className="text-gray-400">123 Architecture Ave, Virtual Hub City, 10001</span>
+                <span className="text-gray-400">Coimbatore, Tamil Nadu, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-green shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <a href="tel:+918072819348" className="text-gray-400 hover:text-green transition-colors">
+                  +91-8072819348
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-green shrink-0" />
-                <span className="text-gray-400">info@labscadd.com</span>
+                <a href="mailto:contactlabscadd@gmail.com" className="text-gray-400 hover:text-green transition-colors">
+                  contactlabscadd@gmail.com
+                </a>
               </li>
             </ul>
           </div>
