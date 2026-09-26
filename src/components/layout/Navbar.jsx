@@ -33,14 +33,16 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/images/logo.jpeg"
-            alt="LabsCadd Logo"
-            width={140}
-            height={48}
-            className="h-12 w-auto object-contain"
-            priority
-          />
+          <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-green/40">
+            <Image
+              src="/images/logo.jpeg"
+              alt="LabsCadd Logo"
+              width={48}
+              height={48}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}

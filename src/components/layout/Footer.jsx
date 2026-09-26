@@ -62,13 +62,15 @@ export default function Footer() {
           {/* Brand Info */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <Image
-                src="/images/logo.jpeg"
-                alt="LabsCadd Logo"
-                width={140}
-                height={48}
-                className="h-12 w-auto object-contain"
-              />
+              <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-green/40">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="LabsCadd Logo"
+                  width={56}
+                  height={56}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </Link>
             <p className="text-gray-400 mb-6">
               Learn. Practice. Build Your Future. Industry-focused virtual training in BIM, Interior Design & Visualization.
@@ -109,7 +111,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-green shrink-0 mt-1" />
-                <span className="text-gray-400">Coimbatore, Tamil Nadu, India</span>
+                <span className="text-gray-400">Trichy, Tamil Nadu, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-green shrink-0" />
