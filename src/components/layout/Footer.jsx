@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-6">
+            <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-green/40">
                 <Image
                   src="/images/logo.jpeg"
@@ -70,6 +70,10 @@ export default function Footer() {
                   height={56}
                   className="w-full h-full object-cover"
                 />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="font-montserrat font-bold text-xl tracking-wider text-white">LABS CADD</span>
+                <span className="text-green text-[10px] font-medium tracking-widest uppercase">Learn. Practice. Build Your Future.</span>
               </div>
             </Link>
             <p className="text-gray-400 mb-6">

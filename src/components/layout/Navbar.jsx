@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-green/40">
             <Image
               src="/images/logo.jpeg"
@@ -42,6 +42,10 @@ export default function Navbar() {
               className="w-full h-full object-cover"
               priority
             />
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="font-montserrat font-bold text-lg tracking-wider text-white">LABS CADD</span>
+            <span className="text-green text-[10px] font-medium tracking-widest uppercase">Learn. Practice. Build.</span>
           </div>
         </Link>
 
