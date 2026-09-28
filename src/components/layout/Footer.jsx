@@ -102,9 +102,9 @@ export default function Footer() {
           <div>
             <h3 className="font-montserrat font-bold text-lg mb-6 text-white">Quick Links</h3>
             <ul className="flex flex-col gap-3">
-              <li><Link href="#about" className="text-gray-400 hover:text-green transition-colors">About Us</Link></li>
-              <li><Link href="#courses" className="text-gray-400 hover:text-green transition-colors">Our Courses</Link></li>
-              <li><Link href="#portfolio" className="text-gray-400 hover:text-green transition-colors">Student Portfolio</Link></li>
+              <li><Link href="/#about" className="text-gray-400 hover:text-green transition-colors">About Us</Link></li>
+              <li><Link href="/#courses" className="text-gray-400 hover:text-green transition-colors">Our Courses</Link></li>
+              <li><Link href="/#portfolio" className="text-gray-400 hover:text-green transition-colors">Student Portfolio</Link></li>
               <li><Link href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openEnroll')); }} className="text-gray-400 hover:text-green transition-colors">Contact Us</Link></li>
             </ul>
           </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-navy-dark relative overflow-hidden scroll-mt-24">
+    <section id="about" aria-labelledby="about-heading" className="py-24 bg-navy-dark relative overflow-hidden scroll-mt-24">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 z-0 opacity-5" style={{
         backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)",
@@ -23,7 +23,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-montserrat text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
+            <h2 id="about-heading" className="font-montserrat text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
               Creative Minds.<br />
               <span className="text-gray-500">Strategic Thinkers.</span>
             </h2>
@@ -62,7 +62,7 @@ export default function About() {
             <div className="relative z-10 p-4 pb-0 bg-white/5 border border-white/10 rounded-t-xl overflow-hidden glass-card">
               <img
                 src="/images/about.png"
-                alt="Minimalist Architecture"
+                alt="LABS CADD Architectural and BIM Design Training in Tamil Nadu"
                 className="w-full h-auto object-cover rounded-t-lg grayscale hover:grayscale-0 transition-all duration-700"
               />
               {/* Overlay Gradient */}

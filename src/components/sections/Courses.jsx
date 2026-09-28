@@ -7,6 +7,7 @@ import Link from "next/link";
 const courses = [
   {
     title: "BIM Professional Program",
+    slug: "bim-professional-program",
     duration: "6 Months",
     level: "Advanced",
     software: ["Revit", "Navisworks", "AutoCAD"],
@@ -14,6 +15,7 @@ const courses = [
   },
   {
     title: "Revit Architecture",
+    slug: "revit-architecture",
     duration: "2 Months",
     level: "Beginner",
     software: ["Revit"],
@@ -21,13 +23,23 @@ const courses = [
   },
   {
     title: "Revit MEP",
+    slug: "revit-mep",
     duration: "2 Months",
     level: "Intermediate",
     software: ["Revit MEP"],
     icon: <BookOpen className="w-8 h-8 text-green" />,
   },
   {
+    title: "AutoCAD 2D & 3D Drafting",
+    slug: "autocad",
+    duration: "2 Months",
+    level: "Beginner",
+    software: ["AutoCAD"],
+    icon: <BookOpen className="w-8 h-8 text-green" />,
+  },
+  {
     title: "Interior Design & Visualization",
+    slug: "interior-design-visualization",
     duration: "4 Months",
     level: "Advanced",
     software: ["3ds Max", "Corona", "V-Ray"],
@@ -35,6 +47,7 @@ const courses = [
   },
   {
     title: "SolidWorks & Fusion 360",
+    slug: "solidworks-fusion-360",
     duration: "2 Months",
     level: "Intermediate",
     software: ["SolidWorks", "Fusion 360"],
@@ -42,6 +55,7 @@ const courses = [
   },
   {
     title: "3ds Max + Corona Renderer",
+    slug: "3ds-max",
     duration: "2 Months",
     level: "Intermediate",
     software: ["3ds Max", "Corona"],
@@ -49,6 +63,7 @@ const courses = [
   },
   {
     title: "SketchUp + Lumion + Photoshop",
+    slug: "sketchup-lumion",
     duration: "2 Months",
     level: "Intermediate",
     software: ["SketchUp", "Lumion", "Photoshop"],
@@ -56,6 +71,7 @@ const courses = [
   },
   {
     title: "Tekla Structures",
+    slug: "tekla-structures",
     duration: "2 Months",
     level: "Advanced",
     software: ["Tekla Structures"],
@@ -63,6 +79,7 @@ const courses = [
   },
   {
     title: "Blender + After Effects + Premiere Pro",
+    slug: "blender",
     duration: "3 Months",
     level: "Intermediate",
     software: ["Blender", "After Effects", "Premiere Pro"],
@@ -97,7 +114,7 @@ export default function Courses() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               className="glass-card p-8 rounded-2xl border border-white/10 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full justify-between"
             >
               <div>
@@ -110,9 +127,11 @@ export default function Courses() {
                   </div>
                 </div>
                 
-                {/* Uniform title container so 1-line and 2-line titles align perfectly */}
-                <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-green transition-colors min-h-[3.5rem] flex items-center">
-                  {course.title}
+                {/* Uniform title container linking to course page */}
+                <h3 className="font-montserrat text-xl font-bold text-white mb-3 min-h-[3.5rem] flex items-center">
+                  <Link href={`/courses/${course.slug}`} className="hover:text-green transition-colors">
+                    {course.title}
+                  </Link>
                 </h3>
                 
                 <div className="flex items-center gap-2 text-gray-400 text-sm mb-6">
@@ -132,18 +151,35 @@ export default function Courses() {
                 </div>
               </div>
 
-              {/* Pinned to bottom of card */}
-              <button 
-                type="button"
-                onClick={() => {
-                  window.dispatchEvent(new CustomEvent('openEnroll', { detail: { course: course.title } }));
-                }}
-                className="mt-auto w-full bg-white/5 hover:bg-green text-white font-medium py-3.5 rounded-lg flex items-center justify-center gap-2 transition-all border border-white/10 hover:border-green cursor-pointer shadow-sm hover:shadow-[0_0_15px_rgba(88,176,0,0.4)]"
-              >
-                Enroll Now <ArrowRight className="w-4 h-4" />
-              </button>
+              {/* Actions pinned to bottom of card */}
+              <div className="mt-auto flex items-center gap-3">
+                <Link
+                  href={`/courses/${course.slug}`}
+                  className="flex-1 bg-white/5 hover:bg-white/10 text-gray-200 hover:text-white text-center text-sm font-medium py-3 rounded-lg border border-white/10 hover:border-green/40 transition-all"
+                >
+                  Syllabus
+                </Link>
+                <button 
+                  type="button"
+                  onClick={() => {
+                    window.dispatchEvent(new CustomEvent('openEnroll', { detail: { course: course.title } }));
+                  }}
+                  className="flex-1 bg-green hover:bg-green-light text-white text-sm font-medium py-3 rounded-lg flex items-center justify-center gap-1.5 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(88,176,0,0.4)] cursor-pointer"
+                >
+                  Enroll <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/courses"
+            className="inline-flex items-center gap-2 text-green hover:text-green-light font-medium text-base hover:underline"
+          >
+            Explore all CAD &amp; BIM courses &amp; syllabuses <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

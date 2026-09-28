@@ -13,7 +13,10 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-navy-dark">
+    <section
+      aria-label="LABS CADD — CAD and BIM Training Institute in Tamil Nadu"
+      className="relative min-h-screen flex items-center pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-navy-dark"
+    >
       {/* Background Image / Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -35,7 +38,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-white/10 mb-6 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
             <span className="text-green font-medium text-xs md:text-sm tracking-wide uppercase">
-              Virtual Training For Future Professionals
+              CAD &amp; BIM Training in Tamil Nadu
             </span>
           </div>
           
