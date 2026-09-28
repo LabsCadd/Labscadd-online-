@@ -1,5 +1,6 @@
 import "./globals.css";
 import { SEO_CONFIG, SITE_URL } from "@/lib/seo-config";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -154,6 +155,7 @@ export default function RootLayout({ children }) {
         style={{ fontFamily: "'Poppins', sans-serif" }}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
